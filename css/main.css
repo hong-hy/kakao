@@ -43,7 +43,7 @@ header nav > ul > li > a .icon-go {display: inline-block; width: 13px; height: 1
 header nav .depth2 {display: none;}
 header nav .depth2 li {display: inline-block; vertical-align: top; padding: 0 25px;}
 header nav .depth2 li a {position: relative; display: block; font-size: 16px; line-height: 20px; color: #444; letter-spacing: -0.05em; padding: 15px 0 16px; font-weight: 500;}
-header nav .depth2 li a::after {display: none; content: ''; position: absolute; width: 100%; height: 2px; left: 0; bottom: 0; background: #222;}
+header nav .depth2 li a::after {display: none; content: ''; position: absolute; width: 100%; height: 2px; left: 0; bottom: -1px; background: #222;}
 
 @media (min-width: 1081px) {
     header nav > ul > li:hover > a::after {display: block;}
@@ -56,8 +56,8 @@ header nav .depth2 li a::after {display: none; content: ''; position: absolute; 
 @media (max-width: 1080px) {
     header {padding: 0;}
     header .logo a {width: 138px; padding: 22px 20px 23px;}
-    header .btn-menu {position: relative; display: inline-block; z-index: 100; padding: 21px 20px; cursor: pointer;}
-    header .btn-menu .icon-menu {display: inline-block; width: 20px; height: 18px; background-position: 0 0;}
+    header .btn-menu {position: relative; display: inline-block; z-index: 100; padding: 18px 20px; cursor: pointer;}
+    header .btn-menu .icon-menu {display: inline-block; width: 20px; height: 18px; background-position: 0 0; vertical-align: top; margin-top: 3px;}
     header .btn-menu .icon-close {display: inline-block; width: 18px; height: 18px; background-position: -25px 0;}
     header nav {display: none;}
     header nav.active {display: block; position: fixed; width: 100%; height: 100%; top: 0; left: 0; padding: 79px 0 30px; overflow-y: auto; background: #fff; box-sizing: border-box;}
@@ -88,4 +88,77 @@ header nav .depth2 li a::after {display: none; content: ''; position: absolute; 
     .main-banner strong {letter-spacing: -0.02em;}
     .main-banner .point {box-shadow: inset 0 -15px 0 #ffdf17; letter-spacing: -0.02em;}
     .main-banner .bg {height: 79.167vw; background-image: url('../img/m-main-banner.png');}
+}
+
+/* main contents */
+.main-contents {max-width: 1100px; margin: 0 auto; padding: 82px 25px 115px; box-sizing: content-box;}
+
+.main-contents .content-left {display: inline-block; width: 640px; margin-right: -4px; vertical-align: top;}
+.main-contents .content-left ul li {display: inline-block; width: 313px; height: 313px; vertical-align: top; border-radius: 40px; margin-right: -4px;}
+.main-contents .content-left ul li:nth-child(even) {margin-left: 14px;}
+.main-contents .content-left ul li:nth-child(1) {background: #ffce00;}
+.main-contents .content-left ul li:nth-child(2) {margin-bottom: 14px; background: #4887f0;}
+.main-contents .content-left ul li:nth-child(3) {background: #ff4e9d;}
+.main-contents .content-left ul li:nth-child(4) {background: #f55;}
+.main-contents .content-left ul li a {position: relative; display: block; width: 100%; height: 100%;}
+.main-contents .content-left ul li .txt {padding: 40px 0 0 50px; font-weight: 600; font-size: 20px; color: #fff; line-height: 29px; letter-spacing: -0.02em;}
+.main-contents .content-left ul li .icon-plus {position: absolute; width: 36px; height: 36px; right: 34px; top: 34px; background-position: -20px 0;}
+.main-contents .content-left ul li .symbol {position: absolute; left: 50px; bottom: 50px;}
+.main-contents .content-left ul li .icon-gift {width: 60px; height: 82px; background-position: -60px 0;}
+.main-contents .content-left ul li .icon-store {bottom: 56px; width: 63px; height: 63px; background-position: -130px 0;}
+.main-contents .content-left ul li .icon-cloth {left: 48px; width: 65px; height: 54px; background-position: -200px 0;}
+.main-contents .content-left ul li .icon-how {width: 117px; height: 50px; background-position: -270px 0;}
+
+.main-contents .content-right {float: right; width: 30.417vw; max-width: 365px; margin-top: 12px;}
+.main-contents .content-right h3 {font-size: 18px; line-height: 27px; font-weight: 500;}
+.main-contents .content-right .press {margin-bottom: 59px;}
+.main-contents .content-right .press h3 {margin-bottom: 27px;}
+.main-contents .content-right .press a {display: block;}
+.main-contents .content-right .press a:hover {text-decoration: underline;}
+.main-contents .content-right .press a p {font-size: 18px; font-weight: 700; line-height: 26px; letter-spacing: -0.045em; margin-bottom: 13px;}
+.main-contents .content-right .press ul li {font-family: Arial; font-weight: 500; font-size: 15px; color: #666; line-height: 24px; letter-spacing: -0.045em;}
+.main-contents .content-right .krew h3 {margin-bottom: 40px;}
+.main-contents .content-right .krew .img-box {position: relative; width: 270px; margin: 0 auto;}
+.main-contents .content-right .krew .profile {width: 186px; border-radius: 100%; overflow: hidden;}
+.main-contents .content-right .krew .circle {position: absolute; width: 124px; height: 124px; right: 0; top: 40px; color: #fff; background: #000; border-radius: 100%;}
+.main-contents .content-right .krew .circle p {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; color: #fff; text-align: center; font-size: 15px; line-height: 26px; letter-spacing: -0.05em; font-weight: 500;}
+.main-contents .content-right .krew .circle p .name {display: block; color: #fff; padding: 2px 0; font-weight: 600; font-size: 22px; line-height: 26px; letter-spacing: -0.05em;}
+.main-contents .content-right .krew .txt {position: relative; padding: 22px 44px 3px; font-weight: 500; font-size: 18px; line-height: 30px; letter-spacing: -0.05em;}
+.main-contents .content-right .krew .txt strong {letter-spacing: -0.05em; text-decoration: underline;}
+.main-contents .content-right .krew .txt .icon-quote1 {position: absolute; width: 29px; height: 24px; left: 0; top: 18px; background-position: 0 -40px;}
+.main-contents .content-right .krew .txt .icon-quote2 {position: absolute; width: 29px; height: 24px; right: 0; bottom: 0; background-position: 0 -70px;}
+
+@media (max-width: 1080px) {
+    .main-contents {padding: 50px 25px 80px;}
+    .main-contents .content-left {display: block; width: 100%;}
+    .main-contents .content-left ul li {width: 49.5%; height: auto; border-radius: 20px;}
+    .main-contents .content-left ul li:nth-child(even) {margin-left: 1%;}
+    .main-contents .content-left ul li:nth-child(1),
+    .main-contents .content-left ul li:nth-child(2) {margin-bottom: 1%;}
+    .main-contents .content-left ul li a {position: relative; padding-bottom: 112.18%;}
+    .main-contents .content-left ul li a .inner {position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+    .main-contents .content-left ul li .txt {padding: 20px 38px 0 24px; font-size: 16px; line-height: 20px; letter-spacing: -0.03em;}
+    .main-contents .content-left ul li .icon-plus {background-image: url('../img/m-icon-sprite.png'); background-size: 270px 355px; right: 16px; top: 20px; width: 20px; height: 20px; background-position: -65px 0;}
+    .main-contents .content-left ul li .symbol {background-image: url('../img/m-icon-sprite.png'); background-size: 270px 355px;}
+    .main-contents .content-left ul li .icon-gift {left: 25px; bottom: 19px; width: 36px; height: 50px; background-position: 0 -35px;}
+    .main-contents .content-left ul li .icon-store {left: 22px; bottom: 26px; width: 38px; height: 38px; background-position: -40px -20px;}
+    .main-contents .content-left ul li .icon-cloth {left: 24px; bottom: 29px; width: 39px; height: 33px; background-position: -40px -60px;}
+    .main-contents .content-left ul li .icon-how {left: 24px; bottom: 28px; width: 70px; height: 31px; background-position: 0 -95px;}
+
+    .main-contents .content-right {float: none; width: 100%; max-width: none; margin-top: 65px;}
+    .main-contents .content-right h3 {font-size: 14px; line-height: 20px;}
+    .main-contents .content-right .press {margin-bottom: 65px;}
+    .main-contents .content-right .press h3 {margin-bottom: 22px;}
+    .main-contents .content-right .press a:hover {text-decoration: none;}
+    .main-contents .content-right .press a p {font-size: 17px; line-height: 24px; letter-spacing: -0.03em; margin-bottom: 11px;}
+    .main-contents .content-right .press ul li {line-height: 23px; letter-spacing: -0.02em;}
+    .main-contents .content-right .krew h3 {margin-bottom: 22px;}
+    .main-contents .content-right .krew .img-box {width: 253px;}
+    .main-contents .content-right .krew .profile {width: 170px;}
+    .main-contents .content-right .krew .circle {width: 114px; height: 114px; top: 38px; right: 4px;}
+    .main-contents .content-right .krew .circle p {font-size: 14px; line-height: 24px; letter-spacing: -0.03em;}
+    .main-contents .content-right .krew .circle p .name {font-size: 17px; letter-spacing: 0; line-height: 24px; padding: 0;}
+    .main-contents .content-right .krew .txt {padding: 23px 0 0 37px; font-size: 17px; line-height: 27px; letter-spacing: -0.032em;}
+    .main-contents .content-right .krew .txt .icon-quote2 {display: none;}
+    .main-contents .content-right .krew .txt strong {letter-spacing: -0.032em;}
 }
