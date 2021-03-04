@@ -18,25 +18,55 @@ button {border:none;}
 /* sprite */
 .icon {background-image: url('../img/icon-sprite.png'); background-size: 500px 500px; background-repeat: no-repeat;}
 
+@media (max-width: 1080px) {
+    .icon-m {background-image: url('../img/m-icon-sprite.png'); background-size: 270px 355px;}
+}
+
 /* header */
 header {position: fixed; width: 100%; left: 0; top: 0; background: #fff; padding: 0 40px; box-sizing: border-box;}
 header .wrap-header {max-width: 1240px; margin: 0 auto; text-align: right;}
 header .logo {float: left;}
 header .logo a {display: block; width: 176px; padding: 35px 0 33px;}
+header .btn-menu {display: none;}
 header nav {display: inline-block; vertical-align: top; padding: 20px 0 19px;}
 header nav > ul > li {display: inline-block; vertical-align: top; margin-right: 60px;}
 header nav > ul > li:nth-child(4) {margin-right: 45px;}
 header nav > ul > li:last-child {margin-right: 0;}
 header nav > ul > li > a::after {display: none; content: ''; position: absolute; width: 100%; height: 4px; left: 0; bottom: 0; background: #ffe100;}
 header nav > ul > li > a {position: relative; display: block; font-size: 16px; line-height: 24px; font-weight: 600; letter-spacing: -0.06em; padding: 12px 0;}
+header nav > ul > li > a.icon-arrow {display: none;}
 header nav > ul > li > a .icon-go {display: inline-block; width: 13px; height: 13px; background-position: 0 0; vertical-align: top; margin: 7px 0 0 7px;}
 header nav .depth2 {display: none;}
 header nav .depth2 li {display: inline-block; vertical-align: top; padding: 0 25px;}
 header nav .depth2 li a {position: relative; display: block; font-size: 16px; line-height: 20px; color: #444; letter-spacing: -0.05em; padding: 15px 0 16px; font-weight: 500;}
 header nav .depth2 li a::after {display: none; content: ''; position: absolute; width: 100%; height: 2px; left: 0; bottom: 0; background: #222;}
 
-header nav > ul > li:hover > a::after {display: block;}
-header nav > ul > li:hover > .depth2 {display: block; position: absolute; width: calc(100% + 80px); height: 51px; left: -40px; top: 87px; text-align: center; border: solid #f4f4f4; border-width: 1px 0; background-color: #fafbfc;}
-header nav > ul > li:hover > .depth2::before {content: ''; position: absolute; top: -20px; left: 0; width: 100%; height: 20px;}
-header nav .depth2 li:hover a {font-weight: 600;}
-header nav .depth2 li:hover a::after {display: block;}
+@media (min-width: 1081px) {
+    header nav > ul > li:hover > a::after {display: block;}
+    header nav > ul > li:hover > .depth2 {display: block; position: absolute; width: calc(100% + 80px); height: 51px; left: -40px; top: 87px; text-align: center; border: solid #f4f4f4; border-width: 1px 0; background-color: #fafbfc;}
+    header nav > ul > li:hover > .depth2::before {content: ''; position: absolute; top: -20px; left: 0; width: 100%; height: 20px;}
+    header nav .depth2 li:hover a {font-weight: 600;}
+    header nav .depth2 li:hover a::after {display: block;}
+}
+
+@media (max-width: 1080px) {
+    header {padding: 0;}
+    header .logo a {width: 138px; padding: 22px 20px 23px;}
+    header .btn-menu {position: relative; display: inline-block; z-index: 100; padding: 21px 20px; cursor: pointer;}
+    header .btn-menu .icon-menu {display: inline-block; width: 20px; height: 18px; background-position: 0 0;}
+    header .btn-menu .icon-close {display: inline-block; width: 18px; height: 18px; background-position: -25px 0;}
+    header nav {display: none;}
+    header nav.active {display: block; position: fixed; width: 100%; height: 100%; top: 0; left: 0; padding: 79px 0 30px; overflow-y: auto; background: #fff; box-sizing: border-box;}
+    header nav > ul {padding: 0 20px;}
+    header nav > ul > li {display: block; text-align: left; margin: 0; border-bottom: 1px solid #e0e0e0;}
+    header nav > ul > li:last-child {border-bottom: none;}
+    header nav > ul > li:nth-child(4) {margin: 0;}
+    header nav > ul > li > a {padding: 0 20px 0 0; font-size: 20px; line-height: 59px; letter-spacing: -0.04em;}
+    header nav > ul > li > a .icon-go {position: absolute; right: 0; top: 50%; transform: translateY(-50%); margin: 0;}
+    header nav > ul > li > a .icon-arrow {display: block; position: absolute; width: 16px; height: 9px; right: 0; top: 50%; transform: translateY(-50%); background-position: -45px 0;}
+    header nav > ul > li.depth1.active > a .icon-arrow {background-position: -45px -10px;}
+    header nav .depth1.active .depth2 {display: block;}
+    header nav .depth2 {padding: 14px 0 16px; margin: -5px 0 -1px; border-top: 1px solid #aaa; border-bottom: 1px solid #efefef; background-color: rgba(246,247,249,0.5);}
+    header nav .depth2 li {display: block; padding: 0;}
+    header nav .depth2 li a {padding: 0 30px; color: #222; font-size: 14px; line-height: 35px; letter-spacing: -0.04em;}
+}
